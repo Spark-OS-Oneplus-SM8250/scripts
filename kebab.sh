@@ -20,8 +20,10 @@ rm -rf hardware/oplus
 git clone https://github.com/Spark-OS-Oneplus-SM8250/hardware_oplus hardware/oplus
 
 echo 'Cloning additionnal stuff [5/6]'
-rm -rf vendor/oneplus/camera
-git clone https://gitlab.com/cjh1249131356/vendor_oneplus_camera vendor/oneplus/camera
+rm -rf vendor/oneplus/camera && rm -rf device/qcom/common && rm -rf vendor/qcom/common
+git clone https://gitlab.com/cjh1249131356/vendor_oneplus_camera vendor/oneplus/camera 
+git clone https://github.com/Spark-OS-Oneplus-SM8250/device_qcom_common device/qcom/common
+git clone https://github.com/Spark-OS-Oneplus-SM8250/vendor_qcom_common vendor/qcom/common
 
 echo 'Recloning somes source stuff but readapted for your device [6/6]'
 rm -rf frameworks/av && rm -rf frameworks/base rm -rf device/spark/sepolicy && rm -rf vendor/spark
